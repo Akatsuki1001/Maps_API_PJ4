@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+}
+
+.control-left-wrapper {
+    z-index: 0;
+    position: absolute;
+    right: 10px;
+    top: 350px;
+    cursor: pointer;
+    margin: 14px 10px 0;
+}
+
+.control-left-wrapper .zoom-in, .control-left-wrapper .zoom-out, .control-left-wrapper .current-location {
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#container-infobox {
+    background: while;
+    height: 280px;
+    padding: 15px;
+
+}
+
+#iw-container  .iw-title {
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 22px;
+   font-weight: 400;
+   padding: 10px;
+   background-color: #48b5e9;
+   color: white;
+   margin: 1px;
+   border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
+}
+.gm-style-iw {
+	max-width: 280px !important;
+
+	top: 15px !important;
+	left: 0px !important;
+	background-color: #fff;
+
+}
+.gm-style-iw + div {display: none;}
+.infowindow{
+    position: relative;
+}
+.direc{
+    margin-left: 70px;
+}
