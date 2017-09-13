@@ -12,15 +12,24 @@
 </head>
 
 <body>
-    <div id="map">
-    </div>
-    <div class="control-left-wrapper">
-        <div class="zoom-in" id="zoom-in"><img src="image/plus.png" alt="some_text" style="width:30px;height:30px;"></div>
-        <div class="zoom-out" id="zoom-out"><img src="image/minus.png" alt="some_text" style="width:30px;height:30px;"></div>
-        <div class="current-location" id="current-location"><img src="image/satellite.png" alt="some_text" style="width:30px;height:30px;"></div>
-    </div>
 
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <a class="openmodal fcbtn btn btn-outline btn-primary btn-1b" href="#contact"  data-toggle="modal" data-id="Peggy Guggenheim Collection - Venice">Contact</a>
+          <div class="modal fade list-width-30" id="contact" style="height: 800px; width:1400px;" role="dialog"   >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-body" >
+
+                        <div id="map"></div>
+                        <div class="control-left-wrapper">
+                            <div class="zoom-in" id="zoom-in"><img src="image/plus.png" alt="some_text" style="width:30px;height:30px;"></div>
+                            <div class="zoom-out" id="zoom-out"><img src="image/minus.png" alt="some_text" style="width:30px;height:30px;"></div>
+                            <div class="current-location" id="current-location"><img src="image/satellite.png" alt="some_text" style="width:30px;height:30px;"></div>
+                        </div>
+                    </div>
+
+          </div>
+      </div>
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7eMXipyCyJvVITPWj1B3AbPIOlZU4g68&callback=initMap"></script>
     <script type="text/javascript" src="js/infobox.js"></script>
     <script type="text/javascript" src="js/jmap.js">
