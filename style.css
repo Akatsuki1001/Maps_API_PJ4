@@ -14,7 +14,7 @@ html, body {
     right: 10px;
     top: 350px;
     cursor: pointer;
-    margin: 14px 10px 0;
+    margin: 14px 90px 0  0;
 }
 
 .control-left-wrapper .zoom-in, .control-left-wrapper .zoom-out, .control-left-wrapper .current-location {
@@ -55,4 +55,16 @@ html, body {
 }
 .direc{
     margin-left: 70px;
+}
+#map{
+  height: 550px;
+  width: 1300px;
+  position: absolute;
+}
+.modal-body{
+    padding: 0px;
+    width: 1400px;
+}
+.modal.in .modal-dialog {
+    width: 1400px;
 }
