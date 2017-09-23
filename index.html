@@ -14,21 +14,89 @@
 <body>
 
 
-    <a class="openmodal fcbtn btn btn-outline btn-primary btn-1b" href="#contact"  data-toggle="modal" data-id="Peggy Guggenheim Collection - Venice">Contact</a>
-          <div class="modal fade list-width-30" id="contact" style="height: 800px; width:1400px;" role="dialog"   >
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-body" >
+    <a class="" href="#contact" data-toggle="modal" data-id="Peggy Guggenheim Collection - Venice">
+        <img src="image/Capture.png" alt="Maps" style="width:238px;height:120px;">
+    </a>
+    <div class="modal fade" id="contact" style="height:800px; width:98%; padding-left:0;" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <div class="page_maps">
+                    <div id="map"></div>
+                    <div class="panel_form">
+                        <div class="panel_hotel">
+                            <div class="container_list">
+                                <header>
+                                    <h3>Results</h3>
+                                </header>
+                                <ul class="results list">
+                                    <li>
+                                        <div class="item" id="1">
+                                            <a href="#" class="image loaded">
+                                                <div class="inner">
+                                                    <div class="item-specific"><span title="Bedrooms"><img src="assets/img/bedrooms.png" class="mCS_img_loaded">2</span><span title="Bathrooms"><img src="assets/img/bathrooms.png" class="mCS_img_loaded">2</span><span title="Area"><img src="assets/img/area.png" class="mCS_img_loaded">240<sup>2</sup></span>
+                                                        <span
+                                                            title="Garages"><img src="assets/img/garages.png" class="mCS_img_loaded">1</span>
+                                                    </div><img src="image/maps/1.jpg" alt="" class="mCS_img_loaded"></div>
+                                            </a>
+                                            <div class="wrapper"><a href="#" id="1"><h3>Steak House Restaurant</h3></a>
+                                                <figure>63 Birch Street</figure>
+                                                <div class="price">$2500</div>
+                                                <div class="info">
+                                                    <div class="type"><i><img src="assets/icons/store/apparel/umbrella-2.png" alt="" class="mCS_img_loaded"></i><span>Apartment</span></div>
+                                                    <div class="rating" data-rating="4"><span class="stars"><i class="fa fa-star s1 active" data-score="1"></i><i class="fa fa-star s2 active" data-score="2"></i><i class="fa fa-star s3 active" data-score="3"></i><i class="fa fa-star s4 active" data-score="4"></i><i class="fa fa-star s5" data-score="5"></i></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" id="2">
+                                            <a href="#" class="image loaded">
+                                                <div class="inner">
+                                                    <div class="item-specific"><span>Menu from: $6.50</span></div><img src="image/maps/2.jpg" alt="" class="mCS_img_loaded"></div>
+                                            </a>
+                                            <div class="wrapper"><a href="#" id="2"><h3>Blue Chilli</h3></a>
+                                                <figure>1882 Trainer Avenue</figure>
+                                                <div class="price">$120</div>
+                                                <div class="info">
+                                                    <div class="type"><i><img src="assets/icons/store/apparel/bags.png" alt="" class="mCS_img_loaded"></i><span>Restaurant</span></div>
+                                                    <div class="rating" data-rating="5"><span class="stars"><i class="fa fa-star s1 active" data-score="1"></i><i class="fa fa-star s2 active" data-score="2"></i><i class="fa fa-star s3 active" data-score="3"></i><i class="fa fa-star s4 active" data-score="4"></i><i class="fa fa-star s5 active" data-score="5"></i></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" id="4">
+                                            <a href="#" class="image loaded">
+                                                <div class="inner">
+                                                    <div class="item-specific"></div><img src="image/maps/3.jpg" alt="" class="mCS_img_loaded"></div>
+                                            </a>
+                                            <div class="wrapper"><a href="#" id="4"><h3>Saguaro Tavern</h3></a>
+                                                <figure>1882 Trainer Avenue</figure>
+                                                <div class="info">
+                                                    <div class="type"><i><img src="assets/icons/store/apparel/shoes.png" alt="" class="mCS_img_loaded"></i><span>Restaurant</span></div>
+                                                    <div class="rating" data-rating="0"><span class="stars"><i class="fa fa-star s1" data-score="1"></i><i class="fa fa-star s2" data-score="2"></i><i class="fa fa-star s3" data-score="3"></i><i class="fa fa-star s4" data-score="4"></i><i class="fa fa-star s5" data-score="5"></i></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
 
-                        <div id="map"></div>
-                        <div class="control-left-wrapper">
-                            <div class="zoom-in" id="zoom-in"><img src="image/plus.png" alt="some_text" style="width:30px;height:30px;"></div>
-                            <div class="zoom-out" id="zoom-out"><img src="image/minus.png" alt="some_text" style="width:30px;height:30px;"></div>
-                            <div class="current-location" id="current-location"><img src="image/satellite.png" alt="some_text" style="width:30px;height:30px;"></div>
+                                
+                                </ul>
+
+                            </div>
                         </div>
                     </div>
+                     <!-- zoom in , zoom out in maps-->
+                    <div class="control-left-wrapper">
+                        <div class="zoom-in" id="zoom-in"><img src="image/plus.png" alt="some_text" style="width:30px;height:30px;"></div>
+                        <div class="zoom-out" id="zoom-out"><img src="image/minus.png" alt="some_text" style="width:30px;height:30px;"></div>
+                        <div class="current-location" id="current-location"><img src="image/satellite.png" alt="some_text" style="width:30px;height:30px;"></div>
+                    </div>
+                </div>
 
-          </div>
-      </div>
+            </div>
+        </div>
+    </div>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7eMXipyCyJvVITPWj1B3AbPIOlZU4g68&callback=initMap"></script>
     <script type="text/javascript" src="js/infobox.js"></script>
