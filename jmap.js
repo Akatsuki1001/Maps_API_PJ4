@@ -1,4 +1,6 @@
-var infoWindow2, maker_created;
+
+
+
 
 function initMap() {
     var directionsService = new google.maps.DirectionsService;
@@ -11,12 +13,15 @@ function initMap() {
     var map = new google.maps.Map(mapDiv, {
         //  center: {lat: -34.397, lng: 150.644},
         center: myLatlng,
-        zoom: 15,
+        zoom: 13,
         zoomControl: false,
         streetViewControl: false,
         scrollwheel: true,
         //disableDefaultUI: false
+
     });
+
+
     directionsDisplay = new google.maps.DirectionsRenderer({
         polylineOptions: {
             strokeColor: "blue"
@@ -36,17 +41,58 @@ function initMap() {
 
     // setting bacground color
     var customerType = new google.maps.StyledMapType([{
-            stylers: [{
-                hue: '#D2E4C8'
-            }]
-        },
-        {
-            featureType: 'water',
-            stylers: [{
-                color: '#599459'
-            }]
-        }
-    ]);
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#444444"
+        }]
+    }, {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [{
+            "color": "#f2f2f2"
+        }]
+    }, {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    }, {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [{
+            "saturation": -100
+        }, {
+            "lightness": 45
+        }]
+    }, {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [{
+            "visibility": "simplified"
+        }]
+    }, {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    }, {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    }, {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [{
+            "color": "#46bcec"
+        }, {
+            "visibility": "on"
+        }]
+    }]);
     var customerTypeId = 'custom_style';
     map.mapTypes.set(customerTypeId, customerType);
     map.setMapTypeId(customerTypeId);
@@ -54,13 +100,13 @@ function initMap() {
     // var infoWindow = new google.maps.InfoWindow;
 
     var xhttp = new XMLHttpRequest();
-     xhttp.onreadystatechange = function() {
-       if (this.readyState == 4 && this.status == 200) {
-       myFunction(this);
-       }
-     };
-     xhttp.open("GET", "data.xml", true);
-     xhttp.send();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+    xhttp.open("GET", "data.xml", true);
+    xhttp.send();
 
 
 
@@ -189,7 +235,7 @@ function initMap() {
         //tao icon dia diem moi dc them\
 
         google.maps.event.addListener(marker, 'click', function() {
-            $('.infowindow').fadeOut('300');
+            $('.infowindow').fadeOut('300');            
             infowindow.setContent(content);
             infowindow.open(map, marker);
 
@@ -288,7 +334,9 @@ function initMap() {
     ZoomControl();
     getNewMarker();
 
-
+    $('#contact').on('shown.bs.modal', function () {
+        google.maps.event.trigger(map, "resize");
+    });
 
 
     //zoom in, zoom out
